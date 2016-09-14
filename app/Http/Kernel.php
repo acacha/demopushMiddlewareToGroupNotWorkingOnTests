@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\GuestUser;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -30,6 +31,8 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            //Uncomment this line to demonstrate that manually adding Middleware instead of using pushMiddlewareToGroup works
+//            GuestUser::class
         ],
 
         'api' => [

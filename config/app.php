@@ -166,7 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        App\Providers\GuestUserProvider::class,
         //
 
         /*
